@@ -1,5 +1,5 @@
 (function(){
-var ChannelMinimize = {
+    var ChannelCollapse = {
         addToolbarItem: function() {
             if(document.querySelectorAll('.show-channels-button').length == 0) {
                 var newToolbarItem = document.createElement('button');
@@ -26,13 +26,14 @@ var ChannelMinimize = {
             for(var i = 0;i < guilds.length; ++i) {
                 guilds[i].addEventListener('click',function(){
                     window.setTimeout(function(){
-                        ChannelMinimize.addToolbarItem();
+                        console.log("Added event listener");
+                        ChannelCollapse.addToolbarItem();
                     },1);
                 });
             }
         }
     };
 
-    ChannelMinimize.addToolbarItem();
-    ChannelMinimize.addEventListeners();
+    ChannelCollapse.addToolbarItem();
+    ChannelCollapse.addEventListeners();
 })();
