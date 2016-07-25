@@ -1,5 +1,5 @@
-(function(){   
-    var ChannelMinimizeAddon = {
+(function(){
+var ChannelMinimize = {
         addToolbarItem: function() {
             if(document.querySelectorAll('.show-channels-button').length == 0) {
                 var newToolbarItem = document.createElement('button');
@@ -20,17 +20,19 @@
                     }
                 });
             }
+        },
+        addEventListeners: function(){
+            var guilds = document.querySelectorAll('.guild');
+            for(var i = 0;i < guilds.length; ++i) {
+                guilds[i].addEventListener('click',function(){
+                    window.setTimeout(function(){
+                        ChannelMinimize.addToolbarItem();
+                    },1);
+                });
+            }
         }
     };
 
-    var guilds = document.querySelectorAll('.guild');
-    for(var i = 0;i < guilds.length; ++i) {
-        guilds[i].addEventListener('click',function(){
-            window.setTimeout(function(){
-                ChannelMinimizeAddon.addToolbarItem();
-            },1);
-        });
-    }
-
-    ChannelMinimizeAddon.addToolbarItem();
+    ChannelMinimize.addToolbarItem();
+    ChannelMinimize.addEventListeners();
 })();
