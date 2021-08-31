@@ -1,6 +1,7 @@
 # Discord Channel Collapse Button
 A small snippit that creates a button to hide the channel list on Discord
 
+## THIS IS NO LONGER SUPPORTER, CHECK OUT BETTERDISCORD ##
 ## How To Use
 ### For BetterDiscord Client Users
 1. Download [channelcollapsebutton.plugin.js](https://github.com/IRDeNial/discord-hide-channel-list/blob/master/channelcollapsebutton.plugin.js)
